@@ -1,14 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TestWCFAndroid"
+             xmlns:local="clr-namespace:TestAndroid"
              x:Class="TestWCFAndroid.MainPage">
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="Enter your server definitions below" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+
+        <Entry x:Name="URLInput"
+               Placeholder="URL"   
+               HorizontalOptions="FillAndExpand"
+               HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="PortInput"
+               Placeholder="Port"
+               HorizontalOptions="FillAndExpand"
+               HorizontalTextAlignment="Center"/>
+        
+        <Button Text="Ping Server" 
+                HorizontalOptions="FillAndExpand"
+                Clicked="PingServerButton_Clicked"/>
+
+        <Label x:Name="CurrentTimestampResult"
+                Text="server ping results" 
+                HorizontalOptions="Center"
+                FontAttributes="Italic"
+                VerticalOptions="CenterAndExpand" 
+               />
     </StackLayout>
 
 </ContentPage>

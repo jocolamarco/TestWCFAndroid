@@ -7,6 +7,7 @@ namespace TestWCFAndroid
 {
     public partial class App : Application
     {
+        //Server server = new Server();
         public App()
         {
             InitializeComponent();
