@@ -7,8 +7,7 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Label Text="Enter your server definitions below" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           HorizontalOptions="Center" />
 
         <Entry x:Name="URLInput"
                Placeholder="URL"   
@@ -19,7 +18,7 @@
                Placeholder="Port"
                HorizontalOptions="FillAndExpand"
                HorizontalTextAlignment="Center"/>
-        
+
         <Button Text="Ping Server" 
                 HorizontalOptions="FillAndExpand"
                 Clicked="PingServerButton_Clicked"/>
@@ -28,7 +27,16 @@
                 Text="server ping results" 
                 HorizontalOptions="Center"
                 FontAttributes="Italic"
-                VerticalOptions="CenterAndExpand" 
+               />
+        
+        <Button Text="Check Stores" 
+                HorizontalOptions="FillAndExpand"
+                Clicked="CheckStoresButton_Clicked"/>
+
+        <Label x:Name="StoreResult"
+                Text="store list" 
+                HorizontalOptions="Center"
+                FontAttributes="Italic"
                />
     </StackLayout>
 

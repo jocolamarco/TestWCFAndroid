@@ -11,6 +11,8 @@ namespace TestWCFAndroid
 {
     public partial class MainPage : ContentPage
     {
+        Server server;
+
         public MainPage()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace TestWCFAndroid
 			string url = URLInput.Text;
             string port = PortInput.Text;
 
-            Server server = new Server(url,port);
+            server = new Server(url,port);
             PingResponse pingResponse = new PingResponse();
 
             pingResponse = server.PingServer();
@@ -40,6 +42,17 @@ namespace TestWCFAndroid
             }
         }
 
-        
+        private void CheckStoresButton_Clicked(object sender, EventArgs e)
+        {
+            string storeResult;
+            string username;
+
+            //by default
+            username = "admin";
+
+            storeResult = server.GetStores(username);                        
+
+            StoreResult.Text = storeResult;
+        }
     }
 }
